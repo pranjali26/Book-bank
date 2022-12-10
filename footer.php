@@ -54,7 +54,7 @@
 <body>
 <footer style="background-color: black; ">
 	<br>
-	<h3 style="color:white;text-align: center;">Contact us through social media</h3><br>
+	<!-- <h3 style="color:white;text-align: center;">Contact us through social media</h3><br>
 
 	<div style="margin:-10px 521px;">
 
@@ -70,7 +70,7 @@
 		<br>
 		Email:&nbsp Online.library@gmail.com <br><br>
 		Mobile:&nbsp &nbsp +8801715672598
-	</p>
+	</p> -->
 </footer>
 </body>
 </html>
