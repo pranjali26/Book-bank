@@ -96,6 +96,9 @@
 {
   margin-left: 420px;
 }
+.dd{
+  margin-bottom: 3vh;
+}
 
 
 	</style>
@@ -149,11 +152,19 @@
     <br><h3 style="text-align: center;">Approve Request</h3><br><br>
     
     <form class="Approve" action="" method="post">
-        <input class="form-control" type="dropdown" name="approve" placeholder="Yes or No" required=""><br>
+        <!-- <input class="form-control" type="dropdown" name="approve" placeholder="Yes or No" required=""><br> -->
+        <div class="dd">
+         
+          <select type="dropdown" class="form-control" name="approve" required>
+            <option disabled selected value>Select Status</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
 
-        <input type="date" name="issue" placeholder="Issue Date yyyy-mm-dd" required="" class="form-control"><br>
+          </select>
+        </div>
+         <input type="date" name="issue" placeholder="Issue Date yyyy-mm-dd" required="" class="form-control"><br> 
 
-        <input type="date" name="return" placeholder="Return Date yyyy-mm-dd" required="" class="form-control"><br>
+        <input type="date" name="return" placeholder="Return Date yyyy-mm-dd" required="" class="form-control"><br> 
         <button class="btn btn-default" type="submit" name="submit">Approve</button>
     </form>
   

@@ -118,16 +118,7 @@ th,td
                 if(isset($_SESSION['login_user']))
 
                 { 	echo "<img class='img-circle profile_img' height=120 width=120 src='images/".$_SESSION['pic']."'>";
-                    echo "</br></br>";//he bgh iith 
-// path ch nasel db madhe tr kashi yeil .. or img nasel folder madhe tya path var 
-//he bgh img tr mala change karychi ahe tr mag me te kel pun me kele nhi yet ye he image circle ka takly
-//profile image sesstion madhe pic ka takly tyne
- // ag te db madhe pic column madhre image folder chi proper path takav lagel .. 
- // update kar te sql madhe ani tya folder madhe img tak proper name ne like tu /img/profile.jpg ashi path asel tr te db madhe tak 
- //okk
- //
- //bki dekhte hai aab hum 
- //pun mala te book sort nhi karta yet na tu jas mhtla tas category wise 
+                    echo "</br></br>";
 echo "Welcome ".$_SESSION['login_user']; 
                 }
                 ?>
@@ -163,6 +154,10 @@ echo "Welcome ".$_SESSION['login_user'];
       if(isset($_SESSION['login_user']))
       {
         ?>
+        <div style="float: left; padding: 25px";>
+        <button  name="submit2" type="submit" class="btn btn-default" style="background-color:#06861a; color:yellow;">Returned</button>&nbsp &nbsp
+        <button  name="submit3" type="submit" class="btn btn-default"style="background-color:red; color:yellow;">Expired</button></div>
+        
           <div class="srch">
           <br>
           <form method="post" action="" name="form1">
@@ -187,8 +182,16 @@ echo "Welcome ".$_SESSION['login_user'];
       if(isset($_SESSION['login_user']))
       {
         
-        $sql="SELECT student.username,roll,books.bid,name,authors,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve !='' and issue_book.approve !='Yes' ORDER BY `issue_book`.`return` ASC";
+        $sql="SELECT student.username,roll,books.bid,name,authors,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve !='' and issue_book.approve !='Yes' ORDER BY `issue_book`.`return` DESC";
+      if(isset($_POST['submit2']))
+      {
 
+      }
+      else if (isset($_POST['submit3']))
+      {
+
+      }
+      else
         $res=mysqli_query($db,$sql);
         
         
@@ -212,7 +215,7 @@ echo "Welcome ".$_SESSION['login_user'];
        echo "<div class='scroll'>";
         echo "<table class='table table-bordered' >";
       while($row=mysqli_fetch_assoc($res))
-      {// img kuth ahe ?
+      {
         echo "<tr>";
           echo "<td>"; echo $row['username']; echo "</td>";
           echo "<td>"; echo $row['roll']; echo "</td>";

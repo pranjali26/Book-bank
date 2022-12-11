@@ -21,17 +21,19 @@
     		background-repeat: no-repeat;
     	}
     	.wrapper
-    	{
-    		padding: 10px;
+    	{ 
+    		padding: 15px;
     		margin: -20px auto;
     		width:900px;
     		height: 600px;
     		background-color: black;
     		opacity: .8;
     		color: white;
+			border: 1px solid;
+          
     	}
     	.form-control
-    	{
+    	{  
     		height: 70px;
     		width: 60%;
     	}

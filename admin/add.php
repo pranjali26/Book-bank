@@ -130,11 +130,44 @@
         <input type="text" name="name" class="form-control" placeholder="Book Name" required=""><br>
         <input type="text" name="authors" class="form-control" placeholder="Authors Name" required=""><br>
         
-        <input type="text" name="status" class="form-control" placeholder="Status" required=""><br>
+         <input type="text" name="status" class="form-control" placeholder="Status" required=""><br>         
         <input type="text" name="quantity" class="form-control" placeholder="Quantity" required=""><br>
-        <input type="text" name="category" class="form-control" placeholder="category" required=""><br>
 
-        <button style="text-align: center;" class="btn btn-default" type="submit" name="submit">ADD</button>
+        <!-- <select type="dropdown" class="form-control" name="approve" required> -->
+            <!-- <option disabled selected value>Select Status</option> -->
+          <select type="dropdown" class="form-control" name="category" required>
+         <option disabled selected value>select category</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Web Devlopement</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Web Devlopement</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Web Devlopement</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Web Devlopement</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+
+         <button style="text-align: center;" class="btn btn-default" type="submit" name="submit">ADD</button>
     </form>
   </div>
 <?php

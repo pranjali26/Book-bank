@@ -23,7 +23,7 @@
     	.wrapper
     	{
     		padding: 10px;
-    		margin: -20px auto;
+    		margin: -30px auto;
     		width:900px;
     		height: 600px;
     		background-color: black;
