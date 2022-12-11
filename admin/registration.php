@@ -29,7 +29,7 @@
   <div class="reg_img">
 
     <div class="box2">
-        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;"> &nbsp &nbsp &nbsp  Library Management System</h1>
+        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;"> &nbsp &nbsp &nbsp  CSE BOOK BANK</h1>
         <h1 style="text-align: center; font-size: 25px;">Admin Registration Form</h1>
 
       <form name="Registration" action="" method="post">

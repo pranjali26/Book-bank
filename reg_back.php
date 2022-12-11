@@ -8,59 +8,35 @@ if(isset($_POST['submit'])){
  $username=$_POST['username'];
  $password=$_POST['password'];
  $roll= $_POST['roll'];
- 
  $emailid=$_POST['email'];
  $phone=$_POST['contact'];
- 
-
  $category=1;
  
- 
-    
-    // $nam = dataFilter($_POST['Name']);
-    // $mobile = dataFilter($_POST['mobile']);
-    // $name = dataFilter($_POST['Username']);
-    // $emailid = dataFilter($_POST['Email']);
-    // $password =	dataFilter(password_hash($_POST['Password'], PASSWORD_BCRYPT));
-    // $category = dataFilter($_POST['category']);
-	// $address = dataFilter($_POST['adr']);
 }	
 	
-// $length = strlen($phone);
 
-// if($length != 10)
-// {
-// 	$_SESSION['message'] = "Invalid Mobile Number !!!";
-// //	header("location: error.php");
-// 	die();
-// }
-
-// if($category==1){
- $query1="INSERT INTO `student`(`first`, `last`, `username`,`password`,`roll`,`email`,`contact` ) VALUES ('$first','$last','$username','$password','$roll','$emailid', '$phone')";
- if ($db->query($query1) === TRUE) {
-    echo "New record created successfully";
-  } else {
-    echo "Error: " . $query1 . "<br>" . $db->error;
-  }
- // $req1=mysqli_query($db,$query1);
- // echo("<script>alert('U Have Successfully Registered')</script>");
- // echo("<script>alert($req1)</script>");
-//  if(mysqli_num_rows($req1)){
-//     $data=mysqli_fetch_assoc($res1);
-//     // if(strcmp($data['password'],$password)==0){
-//     //     // $_SESSION['Name']=$data['Name'];
-//     //     // $_SESSION['Username']=$data['Username'];
-//     //     // $_SESSION['Phone_no']=$data['Phone_no'];
-//     //     // $_SESSION['aadhar']=$data['aadhar'];
-//     //     // $_SESSION['address']=$data['address'];
-//     //     // $_SESSION['logged_in'] = true;
-//     //     echo("<script> window.location='ahome.php'</script>");
-//     }else{
-    
-//         echo("<script>alert('coudnt create')</script>");
-//         //echo("<script> window.location='blogin.php'</script>");
-        
-//     }
-
+$query0="SELECT * FROM `student` WHERE `roll` = '$roll'";
+$row = @mysqli_fetch_array(@mysqli_query($db, $query0));
+ if ($username == $row['username'] or $roll == $row['roll']) {
+  echo "<div class='alert alert-error'>User Already <b>Present</b> ⚠️ with this Roll Number or Username. Please retry or CONTACT ADMIN at admin@CSE-BOOK-BANK 📧</div>";
+  echo ("<script>
+  alert('')
+  setTimeout(function(){ window.location='registration.php' }, 10000);
+  </script>");
+  
+ }
+else{
+  $query1="INSERT INTO `student`(`first`, `last`, `username`,`password`,`roll`,`email`,`contact` ) VALUES ('$first','$last','$username','$password','$roll','$emailid', '$phone')";
+  if ($db->query($query1) === TRUE) {
+   echo("<div class='alert alert-success'>You have Successfully Registered On CSE Book Bank! <br>
+   <a href='student_login.php'> Please login here <br><a> </div>");
+ 
+   echo ("<script>
+  setTimeout(function(){ window.location='student_login.php' }, 10000);
+  </script>");
+   } else {
+     echo "Error: " . $query1 . "<br>" . $db->error;
+   }
+}
 
 ?>
