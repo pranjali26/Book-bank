@@ -12,57 +12,11 @@ session_start();
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon">
 	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="./css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<style type="text/css">
-		/*  */
-
-
-
-
-		.topnav {
-			overflow: hidden;
-			background-color: #333;
-			position: relative;
-		}
-
-		/* Hide the links inside the navigation menu (except for logo/home) */
-		.topnav #myLinks {
-			display: none;
-		}
-
-		/* Style navigation menu links */
-		.topnav a {
-			color: white;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-			display: block;
-		}
-
-		/* Style the hamburger menu */
-		.topnav a.icon {
-			background: black;
-			display: block;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-
-		/* Add a grey background color on mouse-over */
-		.topnav a:hover {
-			background-color: #ddd;
-			color: black;
-		}
-
-		/* Style the active link (or home/logo) */
-		.active {
-			background-color: #04AA6D;
-			color: white;
-		}
-	</style>
 	<!-- nav -->
 	<script>
 		function myFunction() {
@@ -146,9 +100,11 @@ session_start();
 					<br><br><br>
 					<div class="box">
 						<br><br><br><br>
-						<h1 style="text-align: center; font-size: 5vw;" class="heading">Welcome to CSE BooK BanK</h1><br><br>
-						<h3 style="text-align: center;font-size: 2vw;"> Quotes --- Books are ...typerwriter</h3><br>
-						<!-- <h1 style="text-align: center;font-size: 25px;"> </h1><br> -->
+						<h1 style="text-align: center; font-size: 5vw;" class="heading">Welcome to CSE BooK Bank</h1><br><br>
+						<h3 style="text-align: center;font-size: 2.5vw;"> Quotes --- Books are ...typerwriter</h3><br>
+						<div class="explore-button">
+							<h3 class="explore"><a href="books.php">Explore Now</a></h3>
+						</div>
 					</div>
 				</div>
 			</section>

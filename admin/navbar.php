@@ -44,7 +44,7 @@
                     <div style="color: white">
 
                       <?php
-                        echo "<img class='img-circle profile_img' height=30 width=30 src='images/p.png'>";
+                        echo "<img class='img-circle profile_img' height=30 width=30 src='images/p.jpg'>";
 
                         echo " ".$_SESSION['login_user']; 
                       ?>

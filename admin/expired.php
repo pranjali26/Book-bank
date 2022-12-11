@@ -117,7 +117,7 @@ th,td
                 <?php
                 if(isset($_SESSION['login_user']))
 
-                { 	echo "<img class='img-circle profile_img' height=120 width=120 src='images/p.png'>";
+                { 	echo "<img class='img-circle profile_img' height=120 width=120 src='images/p.jpg'>";
                     echo "</br></br>";//he bgh iith 
 // path ch nasel db madhe tr kashi yeil .. or img nasel folder madhe tya path var 
 //he bgh img tr mala change karychi ahe tr mag me te kel pun me kele nhi yet ye he image circle ka takly

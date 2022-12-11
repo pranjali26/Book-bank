@@ -3,7 +3,6 @@
   include "navbar.php";
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,11 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style type="text/css">
-		.srch
-		{
-			padding-left: 1000px;
 
-		}
 		
 		body {
   font-family: "Lato", sans-serif;
@@ -77,7 +72,13 @@
 	height: 50px;
 	background-color: #00544c;
 }
+.src-row{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 
+}
 	</style>
 
 </head>
@@ -92,7 +93,7 @@
                 <?php
                 if(isset($_SESSION['login_user']))
 
-                { 	echo "<img class='img-circle profile_img' height=120 width=120 src='images/p.png'>";
+                { 	echo "<img class='img-circle profile_img' height=120 width=120 src='images/p.jpg'>";
                     echo "</br></br>";
 
                     echo "Welcome ".$_SESSION['login_user']; 
@@ -126,7 +127,7 @@ function closeNav() {
 }
 </script>
 	<!--___________________search bar________________________-->
-
+<div class="src-row">
 	<div class="srch">
 		<form class="navbar-form" method="post" name="form1">
 			
@@ -145,7 +146,7 @@ function closeNav() {
 				</button>
 		</form>
 	</div>
-
+	</div>
 
 	<h2>List Of Books</h2>
 	<?php
