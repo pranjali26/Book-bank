@@ -29,6 +29,10 @@ background:transparent;
 
 body {
 line-height:1;
+height: 100%;
+	margin-top: 0px;
+	background-image: url("images/1.jpg");
+	background-size: cover;
 }
 
 article,aside,details,figcaption,figure,
@@ -164,6 +168,7 @@ section .sec_img
 	height: 550px;
 	margin-top: 0px;
 	background-image: url("images/1.jpg");
+	background-size: cover;
 }
 .box
 {

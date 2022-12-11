@@ -156,9 +156,12 @@ echo "Welcome ".$_SESSION['login_user'];
       {
         ?>
         <div style="float: left; padding: 25px";>
-        <button  name="submit2" type="submit" class="btn btn-default" style="background-color:#06861a; color:yellow;">Returned</button>&nbsp &nbsp
-        <button  name="submit3" type="submit" class="btn btn-default"style="background-color:red; color:yellow;">Expired</button></div>
-        
+
+      <form method="post" action="">
+        <button  name="submit2" type="submit" class="btn btn-default" style="background-color:#06861a; color:yellow;">RETURNED</button>&nbsp&nbsp
+        <button  name="submit3" type="submit" class="btn btn-default"style="background-color:red; color:yellow;">EXPIRED</button>
+      </form>
+      </div>
           <div class="srch">
           <br>
           <form method="post" action="" name="form1">
@@ -180,22 +183,34 @@ echo "Welcome ".$_SESSION['login_user'];
     <?php
     $c=0;
 
-      if(isset($_SESSION['login_user']))
-      {
+      
         
-        $sql="SELECT student.username,roll,books.bid,name,authors,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve !='' and issue_book.approve !='Yes' ORDER BY `issue_book`.`return` DESC";
+        $ret='<p style="color:yellow; background-color:green;">RETURNED</p>';
+        $exp='<p style="colore:yellow; background-color:red;">EXPIRED</p>';
+
+
       if(isset($_POST['submit2']))
       {
-
-      }
+        $sql="SELECT student.username,roll,books.bid,name,authors,approve,issue,issue_book.return FROM student
+       
+        inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$ ret' ORDER BY `issue_book`.`return` Asc";
+      $res=mysqli_query($db,$sql);  
+     }
       else if (isset($_POST['submit3']))
       {
-
-      }
-      else
-        $res=mysqli_query($db,$sql);
+        $sql="SELECT student.username,roll,books.bid,name,authors,approve,issue,issue_book.return FROM student
+         inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$ exp'  ORDER BY `issue_book`.`return` ASC";
+      $res=mysqli_query($db,$sql);
+    }
+    else
+    {
+      $sql="SELECT student.username,roll,books.bid,name,authors,approve,issue,issue_book.return FROM student 
+      inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve !='' and issue_book.approve !='Yes' ORDER BY `issue_book`.`return` DESC";
+     $res=mysqli_query($db,$sql);
+   }
+      
         
-        
+       
         echo "<table class='table table-bordered' style='width:100%;' >";
         //Table header
         
@@ -230,15 +245,16 @@ echo "Welcome ".$_SESSION['login_user'];
       }
     echo "</table>";
         echo "</div>";
-       
-      }
-      else
+    
       {
         ?>
           <h3 style="text-align: center;">Login to see information of Borrowed Books</h3>
         <?php
       }
     ?>
+      
+     
+    
   </div>
 </div>
 </body>
