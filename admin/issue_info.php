@@ -189,7 +189,7 @@ th,td
 
           mysqli_query($db,"UPDATE issue_book SET approve='$var' where `return`='$row[return]' and approve='Yes' limit $c;");
           
-          echo $d."</br>";
+          // echo $d."</br>";
         }
 
         echo "<tr>";

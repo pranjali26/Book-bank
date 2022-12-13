@@ -162,9 +162,9 @@
 
           </select>
         </div>
-         <input type="date" name="issue" placeholder="Issue Date yyyy-mm-dd" required="" class="form-control"><br> 
+         <input type="date" name="issue" placeholder="Issue Date yyyy-mm-dd"  class="form-control"><br> 
 
-        <input type="date" name="return" placeholder="Return Date yyyy-mm-dd" required="" class="form-control"><br> 
+        <input type="date" name="return" placeholder="Return Date yyyy-mm-dd"  class="form-control"><br> 
         <button class="btn btn-default" type="submit" name="submit">Approve</button>
     </form>
   

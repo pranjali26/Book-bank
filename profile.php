@@ -8,12 +8,18 @@
  	<title>Profile</title>
  	<style type="text/css">
  		body {
-            background-color: #f9f9fa
+            /* background-color: #f9f9fa */
+            /* height: 100px; */
+              /* background-color: skyblue; For browsers that do not support gradients */
+              /* background-image: linear-gradient( skyblue,white); */
         }
 
         .padding {
-            padding: 20rem !important
+            /* padding: 20rem !important */
+            margin-left:auto;
+            margin-right: auto;
         }
+
 
         .user-card-full {
             overflow: hidden;
@@ -155,16 +161,17 @@
 
 $q=mysqli_query($db,"SELECT * FROM student where username='$_SESSION[login_user]' ;");
 
-// $row=mysqli_fetch_assoc($q);
+//$row=mysqli_fetch_assoc($q);
 
 ?>
 
-<h2 style="text-align: center;">𝕡𝕣𝕠𝕗𝕚𝕝𝕖</h2>
+<h2 style="text-align: center;">Profile</h2>
 
 <?php
 $row = mysqli_fetch_assoc($q);
 
 ?>
+
 <div class="page-content page-container" id="page-content">
     <div class="padding">
         <div class="row container d-flex justify-content-center">
@@ -174,7 +181,7 @@ $row = mysqli_fetch_assoc($q);
                         <div class="col-sm-4 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
                                 <div class="m-b-25">
-                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
+                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image" >
                                 </div>
                                 <h6 class="f-w-600"><?php echo $row['first'];
                                                     echo $row['last']; ?> </h6>
@@ -193,7 +200,11 @@ $row = mysqli_fetch_assoc($q);
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">password</p>
-                                        <h6 class="text-muted f-w-400"><?php echo $row['password']; ?></h6>
+                                        <h6 class="text-muted f-w-400">********</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">roll</p>
+                                        <h6 class="text-muted f-w-400"><?php echo $row['roll']; ?></h6>
                                     </div>
 
                                     <div class="col-sm-6">

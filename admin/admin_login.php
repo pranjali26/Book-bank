@@ -38,7 +38,7 @@
       <p style="color: white; padding-left: 15px;">
         <br><br>
         <a style="color:yellow;text-decoration: none;" href="update_password.php">Forgot password?</a> &nbsp &nbsp &nbsp &nbsp &nbsp  
-        New to this website?<a style="color: yellow; text-decoration: none;" href="registration.html">&nbspSign Up</a>
+        New to this website?<a style="color: yellow; text-decoration: none;" href="registration.php">&nbspSign Up</a>
       </p>
     </form>
     </div>

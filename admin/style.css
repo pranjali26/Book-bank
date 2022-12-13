@@ -28,11 +28,10 @@ background:transparent;
 }
 
 body {
-line-height:1;
-height: 100%;
+	line-height:1;
+	height: 550px;
 	margin-top: 0px;
-	background-image: url("images/1.jpg");
-	background-size: cover;
+	
 }
 
 article,aside,details,figcaption,figure,
@@ -168,7 +167,7 @@ section .sec_img
 	height: 550px;
 	margin-top: 0px;
 	background-image: url("images/1.jpg");
-	background-size: cover;
+
 }
 .box
 {
@@ -213,8 +212,8 @@ input
 {
 	height: 630px;
 	margin-top: 0px;
-	background-image: url("images/4.png");
-}
+	background-image: url("images/4.png"); 
+}  
 .box2
 {
 	height: 589px;

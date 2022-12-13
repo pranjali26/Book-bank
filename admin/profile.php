@@ -15,11 +15,17 @@ include "navbar.php";
         /* color: white; */
         /* } */
         body {
-            background-color: #f9f9fa
+            /* background-color: #f9f9fa */
+            
+            /* background-color: skyblue; For browsers that do not support gradients */
+              /* background-image: linear-gradient( skyblue,white); */
         }
 
         .padding {
-            padding: 20rem !important
+            /* padding: 20rem !important */
+            margin-left:auto;
+            margin-right: auto;
+            
         }
 
         .user-card-full {
@@ -169,7 +175,7 @@ $q = mysqli_query($db, "SELECT * FROM admin where username='$_SESSION[login_user
 
 ?>
 
-<h2 style="text-align: center;">𝕡𝕣𝕠𝕗𝕚𝕝𝕖</h2>
+<h2 style="text-align: center;" >Profile</h2>
 
 <?php
 $row = mysqli_fetch_assoc($q);
@@ -203,7 +209,7 @@ $row = mysqli_fetch_assoc($q);
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">password</p>
-                                        <h6 class="text-muted f-w-400"><?php echo $row['password']; ?></h6>
+                                        <h6 class="text-muted f-w-400">********</h6>
                                     </div>
 
                                     <div class="col-sm-6">
