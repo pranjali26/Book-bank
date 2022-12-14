@@ -19,7 +19,7 @@
   <style type="text/css">
     section
     {
-      margin-top: -20px;
+      margin-top: 20px;
     }
   </style>   
 </head>

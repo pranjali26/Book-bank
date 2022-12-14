@@ -29,6 +29,7 @@ background:transparent;
 
 body {
 line-height:1;
+
 }
 
 article,aside,details,figcaption,figure,
@@ -138,14 +139,13 @@ section
 	width: 100%;
 	background-color: grey;
 }
-footer
-{    
-
-	height:200px;
+/* footer  
+ {     
+    height:200px;
 	width: 100%;
-	background-color: black;
-}
-
+	background-color: rgb(244, 97, 97);
+ }
+*/
 
 li a
 {
@@ -169,6 +169,8 @@ section .sec_img
 	height: 550px;
 	margin-top: 0px;
 	background-image: url("images/1.jpg");
+	
+
 }
 .box
 {

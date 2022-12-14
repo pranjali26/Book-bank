@@ -17,13 +17,15 @@
     <style type="text/css">
     	body
     	{
-    		background-image: url("images/66.jpg");
+			
+    		background-image: url("images/66.jpg" );
     		background-repeat: no-repeat;
+			
     	}
     	.wrapper
     	{ 
     		padding: 15px;
-    		margin: -20px auto;
+    		margin: 20px auto;
     		width:900px;
     		height: 600px;
     		background-color: black;

@@ -12,12 +12,15 @@
             /* height: 100px; */
               /* background-color: skyblue; For browsers that do not support gradients */
               /* background-image: linear-gradient( skyblue,white); */
-        }
+              /* background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% ); */
+               /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);  */
+              
+               }
 
         .padding {
             /* padding: 20rem !important */
-            margin-left:auto;
-            margin-right: auto;
+            margin-left:200px ;;
+            margin-top: 59px;
         }
 
 
@@ -51,11 +54,11 @@
         }
 
         .user-profile {
-            padding: 20px 0;
+            padding: 50px 0;
         }
 
         .card-block {
-            padding: 1.25rem;
+            padding:1.25rem;
         }
 
         .m-b-25 {
@@ -69,7 +72,7 @@
 
 
         h6 {
-            font-size: 14px;
+            font-size: 15px;
            
         }
 

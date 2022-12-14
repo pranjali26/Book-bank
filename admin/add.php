@@ -85,7 +85,7 @@
 }
 .form-control
 {
-  background-color: #080707;
+  background-color: white;
   color: white;
   height: 40px;
 }
@@ -138,7 +138,7 @@
          <option disabled selected value>select category</option>
             <option value="Data Science">Data Science</option>
             <option value="Machine Learning">Machine Learning</option>
-            <option value="Data Science">Data Science</option>
+            <option value="Data Science">web developement</option>
             <option value="Machine Learning">Web Devlopement</option>
             <option value="Data Science">Data Science</option>
             <option value="Machine Learning">Machine Learning</option>
