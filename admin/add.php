@@ -17,7 +17,7 @@
 		}
 		
 		body {
-  background-color: #024629;
+  background-color: #b4b4b4;
   font-family: "Lato", sans-serif;
   transition: background-color .5s;
 }

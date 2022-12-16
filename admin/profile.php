@@ -23,9 +23,8 @@ include "navbar.php";
 
         .padding {
             /* padding: 20rem !important */
-            margin-left:auto;
-            margin-right: auto;
-            
+            margin-left:200px ;
+            margin-top: 59px;
         }
 
         .user-card-full {

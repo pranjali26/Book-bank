@@ -19,7 +19,7 @@
 
         .padding {
             /* padding: 20rem !important */
-            margin-left:200px ;;
+            margin-left:200px ;
             margin-top: 59px;
         }
 

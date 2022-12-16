@@ -18,9 +18,9 @@
     	body
     	{
 			
-    		background-image: url("images/66.jpg" );
+    		/* background-image: url("images/66.jpg" ); */
     		background-repeat: no-repeat;
-			
+			background-color: #b4b4b4;
     	}
     	.wrapper
     	{ 

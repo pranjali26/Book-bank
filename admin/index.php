@@ -32,7 +32,7 @@ session_start();
 
 
 <body>
-	<div style=" background-color:red; width:100vw; height: auto">
+	<div>
 		<div class="wrapper">
 			<!-- Top Navigation Menu -->
 			<section class="navigation">
@@ -94,7 +94,11 @@ session_start();
 					</div>
 				</div>
 			</section>
-
+        
+			<div class="footer3">
+				<h1 style=text-align:center;>DIEMS</h1>
+			</div>
+		
 		</div>
 	</div>
 

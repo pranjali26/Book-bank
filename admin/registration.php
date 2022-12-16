@@ -19,7 +19,9 @@
   <style type="text/css">
     section
     {
-      margin-top: -20px;
+      margin-top: 20px;
+      background-size: cover;
+     
     }
   </style>   
 </head>
@@ -29,7 +31,7 @@
   <div class="reg_img">
 
     <div class="box2">
-        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;"> &nbsp &nbsp &nbsp  CSE BOOK BANK</h1>
+        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;"> CSE BOOK BANK</h1>
         <h1 style="text-align: center; font-size: 25px;">Admin Registration Form</h1>
 
       <form name="Registration" action="" method="post">
