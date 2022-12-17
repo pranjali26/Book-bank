@@ -14,6 +14,7 @@ include "navbar.php";
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon">
 	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
+	<link rel="stylesheet" href="css/book_card.css">
 	<style type="text/css">
 		.srch {
 			padding-left: 1000px;
@@ -157,9 +158,19 @@ include "navbar.php";
 				</button>
 			</form>
 		</div>
-
+		<!-- data filter for sorting -->
+		<!-- <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-web-dev">Upcoming</li>
+              <li data-filter=".filter-app-dev">Past</li>
+            </ul>
+          </div>
+        </div> -->
 
 		<h2>𝐿𝐼𝒮𝒯 𝒪𝐹 𝐵𝒪𝒪𝒦𝒮</h2>
+		<div class="wrapper-flex">
 		<?php
 
 		if (isset($_POST['submit'])) {
@@ -168,6 +179,7 @@ include "navbar.php";
 			if (mysqli_num_rows($q) == 0) {
 				echo "Sorry! No book found. Try searching again.";
 			} else {
+
 				echo "<table class='table table-bordered table-hover' >";
 				echo "<tr style='background-color: #6db6b9e6;'>";
 				//Table header
@@ -244,7 +256,45 @@ include "navbar.php";
 			echo "</th>";
 			echo "</tr>";
 
+			// for card class for filter
+			function setCategory($catt)
+			{
+				$cat = str_replace(" ", "-", $catt);
+				$cat = strtolower($cat);
+				return $cat;
+			}
 			while ($row = mysqli_fetch_assoc($res)) {
+
+
+
+		?>
+
+
+				<div class="card <?php echo setCategory($row['category']); ?>">
+
+					<div class="image">
+						<img src="https://cdn.pixabay.com/photo/2018/01/09/03/49/the-natural-scenery-3070808_1280.jpg">
+					</div>
+					<div class="title">
+						<h1>
+							<?php echo $row['name']; ?>
+						</h1>
+					</div>
+					<div class="des">
+						<p> By - <?php echo $row['authors']; ?> </p>
+						<?php if ($row['quantity'] == "0") {
+							echo ("<p class='blink-0'>Book not present currently.. See similar</p>");
+						} else {
+							echo ("<marquee class='blink-1'  scrollamount=''>Book is avaliable!</marquee>");
+						}  ?>
+
+					<p><b>Book Id-<?php echo $row['bid']; ?></b> </p>
+						<button onclick="location.href='./issue_info.php'">Get it Now!</button>
+					</div>
+				</div>
+
+			<?php
+
 
 
 				$temp_class = $row['category'];
@@ -277,7 +327,7 @@ include "navbar.php";
 		if (isset($_POST['submit1'])) {
 			if (isset($_SESSION['login_user'])) {
 				mysqli_query($db, "INSERT INTO issue_book Values('$_SESSION[login_user]', '$_POST[bid]', '', '', '');");
-		?>
+			?>
 				<script type="text/javascript">
 					window.location = "request.php"
 				</script>
@@ -292,6 +342,7 @@ include "navbar.php";
 		}
 
 		?>
+		</div>
 	</div>
 </body>
 
