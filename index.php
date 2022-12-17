@@ -73,7 +73,31 @@ session_start();
 											<a href="#!">Data Science</a>
 										</li>
 										<li>
-											<a href="#!">Web Dev</a>
+											<a href="#!">Web Devlopement</a>
+										</li>
+										<li>
+											<a href="#!">Machine Learning</a>
+										</li>
+										<li>
+											<a href="#!">App Devlopement</a>
+										</li>
+										<li>
+											<a href="#!">Networking</a>
+										</li>
+										<li>
+											<a href="#!">Mathamathics</a>
+										</li>
+										<li>
+											<a href="#!">System Design</a>
+										</li>
+										<li>
+											<a href="#!">Software Engineering</a>
+										</li>
+										<li>
+											<a href="#!">Software Engineering</a>
+										</li>
+										<li>
+											<a href="#!">Data structure and Algorithm</a>
 										</li>
 									</ul>
 								</li>

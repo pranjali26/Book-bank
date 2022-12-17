@@ -95,9 +95,7 @@ session_start();
 				</div>
 			</section>
         
-			<div class="footer3">
-				<h1 style=text-align:center;>DIEMS</h1>
-			</div>
+			
 		
 		</div>
 	</div>
