@@ -35,6 +35,8 @@
                   <li><a href="profile.php">PROFILE</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                  <li><a href="Message.php"><span class="glyphicon glyphicon-envelope"></span></a><li>
+                  <span class="badge bg-green"></span></a></li>
                   <li><a href="">
                     <div style="color: white">
                       <?php

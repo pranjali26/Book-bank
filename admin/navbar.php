@@ -40,6 +40,7 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
+                  
                   <li><a href="profile.php">
                     <div style="color: white">
 
