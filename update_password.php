@@ -11,8 +11,9 @@
 		body
 		{
 			height: 650px;
-			background-image: url("images/7.jpg");
-			background-repeat: no-repeat;
+			/* background-image: url("images/7.jpg"); */
+			/* background-repeat: no-repeat; */
+			background-color: #b4b4b4;
 		}
 		.wrapper
 		{
