@@ -79,6 +79,62 @@
 	justify-content: center;
 
 }
+.btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Green */
+.success {
+  border-color: greenyellow;
+  color:black;
+}
+
+.success:hover {
+  background-color: #6db6b9e6;
+  color: white;
+}
+
+
+
+/* Gray */
+.default {
+  border-color: red;
+  color: black;
+}
+
+.default:hover {
+  background: #6db6b9e6;
+}
+/* Green */
+.success {
+  border-color: greenyellow;
+  color:black;
+}
+
+.success:hover {
+  background-color: #6db6b9e6;
+  color: white;
+}
+/* Green */
+.success {
+  border-color: greenyellow;
+  color:black;
+}
+
+.success:hover {
+  background-color: #6db6b9e6;
+  color: white;
+}
+
+
+
+
 	</style>
 
 </head>
@@ -147,6 +203,21 @@ function closeNav() {
 		</form>
 	</div>
 	</div>
+	<button class="btn success">DS & ML</button>
+	<button class="btn default">Default</button>
+	<button class="btn default">Default</button>
+	<button class="btn default">Default</button>
+	<button class="btn success">DS & ML</button>
+
+
+
+
+
+
+
+
+
+
 
 	<h2>List Of Books</h2>
 	<?php

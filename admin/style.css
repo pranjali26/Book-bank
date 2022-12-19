@@ -200,7 +200,8 @@ section .sec_img
 {
 	height: 650px;
 	margin-top: 0px;
-	background-image: url("images/3.jpg");
+	/* background-image: url("images/3.jpg"); */
+	background-color: #b4b4b4;
 }
 .box1
 {

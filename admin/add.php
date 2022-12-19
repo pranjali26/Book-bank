@@ -86,8 +86,11 @@
 .form-control
 {
   background-color: white;
-  color: white;
+  color: black;
   height: 40px;
+}
+.btnbtn-danger{
+  background-color:yellowgreen;
 }
 
 	</style>
@@ -136,24 +139,26 @@
             <!-- <option disabled selected value>Select Status</option> -->
           <select type="dropdown" class="form-control" name="category" required>
          <option disabled selected value>select category</option>
-            <option value="Data Science">Data Science</option>
-            <option value="Machine Learning">Machine Learning</option>
-            <option value="web developement">web developement</option>
-            <option value="Datascience">Datascience</option>
+            <option value="Data Science">DS & ML</option>
+            <option value="web developement">Web Developement</option>
+            <option value="Datascience">Data Science</option>
             <option value="App Devlopement">App Devlopement</option>
+            <option value="Mathamathics">Mathematics</option>
             <option value="Networking">Networking</option>
-            <option value="Mathamathics">Mathamathics</option>
-            <option value="IOT">IOT</option>
             <option value="DBMS">DBMS</option>
-            <option value="Programming Language">Programming Language</option>
+            <option value="Programming Language">Programming </option>
             <option value="System Design">System Design</option>
-            <option value="Operating system">Operating system</option>
-            <option value="Data structure and Algorithm">Data structure and Algorithm</option>
+            <option value="Operating system">Operating System</option>
+            <option value="Microarchitecture">Microarchitecture</option>
+            <option value="Data structure and Algorithm">Data Structure and Algorithm</option>
             <option value="Software Engineering">Software Engineering</option>
+            <option value="Other">Other</option>
             
             <option value="Cyber security">Cyber security</option>
-            
-         <button style="text-align: center;" class="btn btn-default" type="submit" name="submit">ADD</button>
+              </select><br>
+
+         <button style="text-align: center;" class="btn btn-success" type="submit" name="submit">ADD</button>
+
     </form>
   </div>
 <?php
