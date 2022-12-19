@@ -80,7 +80,7 @@ button:hover{
 <div class="card">
  
 <div class="image">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
+   <img src="images/category/">
 </div>
 <div class="title">
  <h1>

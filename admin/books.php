@@ -206,9 +206,48 @@ function closeNav() {
 				echo "<th>"; echo "Category";  echo "</th>";
 			echo "</tr>";	
 
-			while($row=mysqli_fetch_assoc($res))
+			//while($row=mysqli_fetch_assoc($res))
+			//{
+				//echo "<tr>";
+				// for card class for filter
+			function setCategory($catt)
 			{
-				echo "<tr>";
+				$cat = str_replace(" ", "-", $catt);
+				$cat = strtolower($cat);
+				return $cat;
+			}
+			while ($row = mysqli_fetch_assoc($res)) {
+
+
+
+		?>
+
+
+				<div class="card <?php echo setCategory($row['category']); ?>">
+
+					<div class="image">
+						<img src="images/category/Datascience.jpg">
+					</div>
+					<div class="title">
+						<h1>
+							<?php echo $row['name']; ?>
+						</h1>
+					</div>
+					<div class="des">
+						<p> By - <?php echo $row['authors']; ?> </p>
+						<?php if ($row['quantity'] == "0") {
+							echo ("<p class='blink-0'>Book not present currently.. See similar</p>");
+						} else {
+							echo ("<marquee class='blink-1'  scrollamount=''>Book is avaliable!</marquee>");
+						}  ?>
+
+					<p><b>Book Id-<?php echo $row['bid']; ?></b> </p>
+						<button onclick="location.href='./issue_info.php'">Get it Now!</button>
+					</div>
+				</div>
+
+			<?php
+
 				echo "<td>"; echo $row['bid']; echo "</td>";
 				echo "<td>"; echo $row['name']; echo "</td>";
 				echo "<td>"; echo $row['authors']; echo "</td>";
