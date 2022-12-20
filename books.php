@@ -235,14 +235,72 @@ include "navbar.php";
 		<div class="wrapper-flex">
 			<?php
 
+			// general utility functions 
+			function setImgPath($catt)
+			{
+				$cat = trim($catt);
+				// $cat = 
+				$newcat = strtolower(str_replace(" ", "-", $cat));
+				// set image folder path here 
+				
+				$url = '/images/category/' . $newcat . '.jpg';
+			if($newcat != "") {
+				return $url;
+			} else return '/images/category/software-engineering.jpg';
+				
+			}
+			function setCategory($catt)
+			{
+				$cat = str_replace(" ", "-", $catt);
+				$cat = strtolower($cat);
+				return $cat;
+			}
+
 			if (isset($_POST['submit'])) {
 				$q = mysqli_query($db, "SELECT * from books where name like '%$_POST[search]%' ");
+
 
 				if (mysqli_num_rows($q) == 0) {
 					echo "Sorry! No book found. Try searching again.";
 				} else {
 
 					while ($row = mysqli_fetch_assoc($q)) {
+			?>
+
+						<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;">
+							<?php
+							$temp_tag_color = $row['quantity'] ==  '0' ? 'red' : 'green';
+							?>
+
+							<div class="image">
+								<img src=".<?php echo setImgPath($row['category']); ?>" alt="<?php echo $row['category']; ?> Image" 
+								
+				   style=" position: relative;">
+								<div class="blink tag" style="background-color:<?php echo $temp_tag_color; ?>;">
+									<p class="count"><?php echo $row['quantity']; ?></p>
+								</div>
+								<div class="tag-foot">
+									<p>Copy</p>
+								</div>
+							</div>
+							<div class="title">
+								<h1>
+									<?php echo $row['name']; ?>
+								</h1>
+							</div>
+							<div class="des">
+								<p> By - <?php echo $row['authors']; ?> </p>
+								<?php if ($row['quantity'] == "0") {
+									echo ("<p class='blink-0'>Book not present currently.. See similar</p>");
+								} else {
+									echo ("<marquee class='blink-1'  scrollamount=''>Book is avaliable!</marquee>");
+								}  ?>
+								<p><b>Book Id-<?php echo $row['bid']; ?></b> </p>
+								<button onclick="location.href='./issue_info.php'">Get it Now!</button>
+							</div>
+						</div>
+
+					<?php
 					}
 				}
 			}
@@ -251,75 +309,46 @@ include "navbar.php";
 
 
 				// for card class for filter
-				function setCategory($catt)
-				{
-					$cat = str_replace(" ", "-", $catt);
-					$cat = strtolower($cat);
-					return $cat;
-				}
+
 				while ($row = mysqli_fetch_assoc($res)) {
 
 
-			?>
+					?>
 
 
-					<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;">
-						<?php 
-						$temp_tag_color = $row['quantity'] ==  '0' ? 'red': 'green';
-						?>
+<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;">
+							<?php
+							$temp_tag_color = $row['quantity'] ==  '0' ? 'red' : 'green';
+							?>
 
-						<div class="image">
-							<img src="images/category/Datascience.jpg" style=" position: relative;">
-							<div class="blink tag" style="background-color:<?php echo $temp_tag_color; ?>;" >
-								<p class="count"><?php echo $row['quantity']; ?></p>
-							</div>
-							<div class="tag-foot">
+							<div class="image">
+								<img src=".<?php echo setImgPath($row['category']); ?>" alt="<?php echo $row['category']; ?> Image"  style=" position: relative;">
+								<div class="blink tag" style="background-color:<?php echo $temp_tag_color; ?>;">
+									<p class="count"><?php echo $row['quantity']; ?></p>
+								</div>
+								<div class="tag-foot">
 									<p>Copy</p>
 								</div>
+							</div>
+							<div class="title">
+								<h1>
+									<?php echo $row['name']; ?>
+								</h1>
+							</div>
+							<div class="des">
+								<p> By - <?php echo $row['authors']; ?> </p>
+								<?php if ($row['quantity'] == "0") {
+									echo ("<p class='blink-0'>Book not present currently.. See similar</p>");
+								} else {
+									echo ("<marquee class='blink-1'  scrollamount=''>Book is avaliable!</marquee>");
+								}  ?>
+								<p><b>Book Id-<?php echo $row['bid']; ?></b> </p>
+								<button onclick="location.href='./issue_info.php'">Get it Now!</button>
+							</div>
 						</div>
-						<div class="title">
-							<h1>
-								<?php echo $row['name']; ?>
-							</h1>
-						</div>
-						<div class="des">
-							<p> By - <?php echo $row['authors']; ?> </p>
-							<?php if ($row['quantity'] == "0") {
-								echo ("<p class='blink-0'>Book not present currently.. See similar</p>");
-							} else {
-								echo ("<marquee class='blink-1'  scrollamount=''>Book is avaliable!</marquee>");
-							}  ?>
-
-							<p><b>Book Id-<?php echo $row['bid']; ?></b> </p>
-							<button onclick="location.href='./issue_info.php'">Get it Now!</button>
-						</div>
-					</div>
 
 				<?php
-
-					// 	$temp_class = $row['category'];
-					// 	echo "<tr class = '$temp_class'>";
-					// 	echo "<td>";
-					// 	echo $row['bid'];
-					// 	echo "</td>";
-					// 	echo "<td>";
-					// 	echo $row['name'];
-					// 	echo "</td>";
-					// 	echo "<td>";
-					// 	echo $row['authors'];
-					// 	echo "</td>";
-
-					// 	echo "<td>";
-					// 	echo $row['status'];
-					// 	echo "</td>";
-					// 	echo "<td>";
-					// 	echo $row['quantity'];
-					// 	echo "</td>";
-					// 	echo "<td>";
-					// 	echo $row['category'];
-					// 	echo "</td>";
-
-					// 	echo "</tr>";
+				
 				}
 				// echo "</table>";
 			}
