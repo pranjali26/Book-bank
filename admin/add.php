@@ -123,6 +123,7 @@
 
 <div id="main">
   <span style="font-size:30px;cursor:pointer; color: black;" onclick="openNav()">&#9776; open</span>
+  <span class="border border-primary"></span>
   <div class="container" style="text-align: center;">
     <h2 style="color:black; font-family: Lucida Console; text-align: center"><b>Add New Books</b></h2>
     
@@ -147,14 +148,14 @@
             <option value="Networking">Networking</option>
             <option value="DBMS">DBMS</option>
             <option value="Programming Language">Programming </option>
-            <option value="System Design">System Design</option>
+            
             <option value="Operating system">Operating System</option>
             <option value="Microarchitecture">Microarchitecture</option>
             <option value="Data structure and Algorithm">Data Structure and Algorithm</option>
             <option value="Software Engineering">Software Engineering</option>
             <option value="Other">Other</option>
             
-            <option value="Cyber security">Cyber security</option>
+            
               </select><br>
 
          <button style="text-align: center;" class="btn btn-success" type="submit" name="submit">ADD</button>

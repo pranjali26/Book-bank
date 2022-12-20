@@ -35,6 +35,7 @@
         <h1 style="text-align: center; font-size: 25px;">Admin Registration Form</h1>
 
       <form name="Registration" action="" method="post">
+        <br>
         
         <div class="login">
           <input class="form-control" type="text" name="first" placeholder="First Name" required=""> <br>
