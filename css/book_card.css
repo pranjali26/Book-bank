@@ -1,78 +1,114 @@
-.main{
+.main {
+  margin: 2%;
+}
 
-    margin: 2%;
-   }
-   
-   .wrapper-flex{
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-flex-wrap: wrap;
-   }
-   .card{
-        width: 20%;
-        display: inline-block;
-        box-shadow: 2px 2px 20px black;
-        border-radius: 5px; 
-        margin: 2%;
-       }
-   
-  .card .image img{
-     width: 100%;
-     border-top-right-radius: 5px;
-     border-top-left-radius: 5px;
-     
-   
-    
-    }
-   
-   .title{
-    
-     text-align: center;
-     padding: 10px;
-     
-    }
-   
-   h1{
-     font-size: 20px;
-    }
-   
-   .des{
-     padding: 3px;
-     text-align: center;
-    
-     padding-top: 5px;
-           border-bottom-right-radius: 5px;
-     border-bottom-left-radius: 5px;
-   }
-   .card button{
-     margin-top: 30px;
-     margin-bottom: 10px;
-     background-color: white;
-     border: 1px solid black;
-     border-radius: 5px;
-     padding:10px;
-   }
-   .card button:hover{
-     background-color: black;
-     color: white;
-     transition: .5s;
-     cursor: pointer;
-   }
+.wrapper-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card {
+  width: 20%;
+  display: inline-block;
+  box-shadow: 2px 2px 20px black;
+  border-radius: 5px;
+  margin: 2%;
+}
 
+.card .image {
+  position: relative;
+}
+.card .image img {
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  position: relative;
+}
+ .tag {
+  z-index: 100;
+  text-align: center;
+  bottom: 8px;
+  right: 16px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  clip-path: polygon(
+    50% 0%,
+    93% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
 
-   .blink-1 {
-    animation: blinker 1.5s linear infinite;
-    color: rgb(30, 215, 95);
-    font-family: sans-serif;
+.card .image .tag .count {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  color: ghostwhite;
+  font-weight: bold;
+}
+.card .image .tag-foot {
+  z-index: 101;
+  text-align: center;
+  bottom: -14px;
+  right: 23px;
+  font-weight: bold;
+  position: absolute;
+  color: lightyellow;
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.des {
+  padding: 3px;
+  text-align: center;
+
+  padding-top: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card button {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+.card button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.blink {
+  animation: blinker 2.5s linear infinite;
+ 
+}
+.blink-1 {
+  animation: blinker 1.5s linear infinite;
+  color: rgb(30, 215, 95);
+  font-family: sans-serif;
 }
 .blink-0 {
-    animation: blinker 1.5s linear infinite;
-    color:red;
-    font-family: sans-serif;
+  animation: blinker 1.5s linear infinite;
+  color: red;
+  font-family: sans-serif;
 }
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }

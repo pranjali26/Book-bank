@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <link rel="stylesheet" href="css/book_card.css">
  <title>Cards</title>
 </head>
 
@@ -113,8 +114,22 @@ Write title Here</h1>
 
 <div class="card">
 
-<div class="image">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
+<div class="image" style="position: relative;">
+
+   <img style=" position: relative;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
+   <div class ="blink-1" style="z-index:100; 
+   text-align:center; bottom: 8px;
+  right: 16px; position:absolute; height: 50px; width: 50px; background-color:green; clip-path: polygon(50% 0%, 93% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);"> 
+<p style="position:absolute;  top: 40%;
+  left: 40%; color:ghostwhite"><b>5</b></p>
+</div>
+<div class ="tag-foot" style="z-index:100; 
+   text-align:center; bottom: 4px;
+  right: 16px; position:absolute; color:lightyellow; "> 
+<p>copies</p>
+  
+</div>
+
 </div>
 <div class="title">
  <h1>
@@ -122,7 +137,9 @@ Write title Here</h1>
 </div>
 <div class="des">
  <p>You can Add Desccription Here...</p>
+ <div class ="blink-1" style="height: 50px; width: 50px; background-color:green; clip-path: polygon(50% 0%, 93% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);"></div>
 <button>Read More...</button>
+
 </div>
 </div>
 <!--cards -->
