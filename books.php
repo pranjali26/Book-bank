@@ -243,10 +243,10 @@ include "navbar.php";
 				$newcat = strtolower(str_replace(" ", "-", $cat));
 				// set image folder path here 
 				
-				$url = '/images/category/' . $newcat . '.jpg';
+				$url = '/images/category-img/' . $newcat . '.jpg';
 			if($newcat != "") {
 				return $url;
-			} else return '/images/category/software-engineering.jpg';
+			} else return '/images/category-img/software-engineering.jpg';
 				
 			}
 			function setCategory($catt)
