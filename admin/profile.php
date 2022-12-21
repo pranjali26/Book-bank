@@ -16,8 +16,8 @@ include "navbar.php";
         /* } */
         body {
             /* background-color: #f9f9fa */
-            background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(202,179,214,1) 40%, rgba(148,187,233,1) 100%);
+            /* background: rgb(238,174,202); */
+/* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(202,179,214,1) 40%, rgba(148,187,233,1) 100%); */
 
         }
 
@@ -194,7 +194,7 @@ $row = mysqli_fetch_assoc($q);
                         <div class="col-sm-4 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
                                 <div class="m-b-25">
-                                    <img src="images/p1.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <img src="http://localhost/finalyear/admin/images/p.jpg" class="img-radius" alt="User-Profile-Image">
                                 </div>
                                 <h6 class="f-w-600"><?php echo $row['first'];
                                                     echo $row['last']; ?> </h6>

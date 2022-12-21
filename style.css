@@ -166,7 +166,9 @@ nav li
 
 section .sec_img
 {
-	height: 550px;
+	height: 100vh;
+	overflow-y: hidden;
+	overflow-x: hidden;
 	margin-top: 0px;
 	background-image: url("images/1.jpg");
 	
