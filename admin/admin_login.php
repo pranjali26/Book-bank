@@ -25,7 +25,7 @@
   <div class="log_img">
    <br>
     <div class="box1">
-        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">CSE BOOK BANK</h1>
+        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">CSE BOOK BANK</h1><br>
         <h1 style="text-align: center; font-size: 25px;">Admin Login Form</h1><br>
       <form  name="login" action="" method="post">
         <br><br>
@@ -35,7 +35,7 @@
           <input class="btn btn-default" type="submit" name="submit" value="Login" style="color: black; width: 70px; height: 30px"> 
         </div>
       
-      <p style="color: white; padding-left: 15px;">
+      <p style="color: white; padding-left: 15px;"><br>
         <br><br>
         <a style="color:yellow;text-decoration: none;" href="update_password.php">Forgot password?</a> &nbsp &nbsp &nbsp &nbsp &nbsp  
         New to this website?<a style="color: yellow; text-decoration: none;" href="registration.php">&nbspSign Up</a>

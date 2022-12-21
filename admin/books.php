@@ -166,7 +166,7 @@
 
 <div id="main">
   
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 
 
 <script>

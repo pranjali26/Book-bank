@@ -29,7 +29,7 @@
   <div class="log_img">
    <br>
     <div class="box1">
-        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">&nbsp ℂ𝕊𝔼 𝔹𝕆𝕆𝕂 𝔹𝔸ℕ𝕂</h1>
+        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">&nbsp CSE BOOK BANK</h1>
         <h1 style="text-align: center; font-size: 25px;">User Login Form</h1><br>
       <form  name="login" action="" method="post">
         

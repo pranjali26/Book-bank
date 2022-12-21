@@ -139,7 +139,7 @@
         <!-- <select type="dropdown" class="form-control" name="approve" required> -->
             <!-- <option disabled selected value>Select Status</option> -->
           <select type="dropdown" class="form-control" name="category" required>
-         <option disabled selected value>select category</option>
+         <option type="text" disabled selected value>select category</option>
             <option value="Data Science">DS & ML</option>
             <option value="web developement">Web Developement</option>
             <option value="Datascience">Data Science</option>
