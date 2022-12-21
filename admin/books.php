@@ -86,58 +86,23 @@ include "navbar.php";
 		}
 
 		.btn {
-			border: 2px solid black;
+			border: 1px solid #78757d;
 			border-radius: 5px;
 			background-color: white;
 			color: black;
-			padding: 10px 28px;
-			font-size: 16px;
+			/* padding: 10px 28px; */
+			font-size: 14px;
 			cursor: pointer;
 		}
 
-		/* Green */
-		.success {
-			border-color: greenyellow;
-			color: black;
-		}
-
-		.success:hover {
-			background-color: #6db6b9e6;
-			color: white;
-		}
-
-
-
 		/* Gray */
 		.default {
-			border-color: red;
+			border-color: grey;
 			color: black;
 		}
 
 		.default:hover {
 			background: #6db6b9e6;
-		}
-
-		/* Green */
-		.success {
-			border-color: greenyellow;
-			color: black;
-		}
-
-		.success:hover {
-			background-color: #6db6b9e6;
-			color: white;
-		}
-
-		/* Green */
-		.success {
-			border-color: greenyellow;
-			color: black;
-		}
-
-		.success:hover {
-			background-color: #6db6b9e6;
-			color: white;
 		}
 	</style>
 
@@ -147,68 +112,7 @@ include "navbar.php";
 	<!--_________________sidenav_______________-->
 
 	<div id="mySidenav" class="sidenav">
-<<<<<<< HEAD
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-  			<div style="color: white; margin-left: 60px; font-size: 20px;">
-
-                <?php
-                if(isset($_SESSION['login_user']))
-
-                { 	echo "<img class='img-circle profile_img' height=120 width=120 src='images/p.jpg'>";
-                    echo "</br></br>";
-
-                    echo "Welcome ".$_SESSION['login_user']; 
-                }
-                ?>
-            </div><br><br>
-
- 
-  <div class="h"> <a href="books.php">Books</a></div>
-  <div class="h"> <a href="request.php">Book Request</a></div>
-  <div class="h"> <a href="issue_info.php">Issue Information</a></div>
-  <div class="h"> <a href="add.php">ADD-BOOKS</a></div>
-</div>
-
-<div id="main">
-  
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "300px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.body.style.backgroundColor = "white";
-}
-</script>
-	<!--___________________search bar________________________-->
-<div class="src-row">
-	<div class="srch">
-		<form class="navbar-form" method="post" name="form1">
-			
-				<input class="form-control" type="text" name="search" placeholder="search books.." required="">
-				<button style="background-color: #6db6b9e6;" type="submit" name="submit" class="btn btn-default">
-					<span class="glyphicon glyphicon-search"></span>
-				</button>
-		</form>
-	</div>
-	<!--___________________request book__________________-->
-	<div class="srch">
-		<form class="navbar-form" method="post" name="form1">
-			
-				<input class="form-control" type="text" name="bid" placeholder="Enter Book ID" required="">
-				<button style="background-color: #6db6b9e6;" type="submit" name="submit1" class="btn btn-default">Request
-				</button>
-		</form>
-	</div>
-=======
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
 		<div style="color: white; margin-left: 60px; font-size: 20px;">
@@ -249,7 +153,7 @@ function closeNav() {
 		<div class="h"> <a href="request.php">Book Request</a></div>
 		<div class="h"> <a href="issue_info.php">Issue Information</a></div>
 		<div class="h"> <a href="add.php">ADD-BOOKS</a></div>
->>>>>>> ffa32ac9d46204ace50bd51878c42aa5c4f00b4b
+
 	</div>
 
 	<div id="main">
@@ -291,11 +195,11 @@ function closeNav() {
 				</form>
 			</div>
 		</div>
-		<button class="btn success">DS & ML</button>
+		
 		<button class="btn default">Default</button>
 		<button class="btn default">Default</button>
 		<button class="btn default">Default</button>
-		<button class="btn success">DS & ML</button>
+
 
 
 
