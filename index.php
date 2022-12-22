@@ -122,10 +122,10 @@ session_start();
 			<section>
 				<div class="sec_img">
 					<br><br><br>
-					<div class="box">
+					<div class="box" data-aos="fade-up">
 						<br><br><br><br>
 						<h1 style="text-align: center; font-size: 5vw;" class="heading">Welcome to CSE BooK Bank</h1><br><br>
-						<h3 style="text-align: center;font-size: 2.5vw;"> Quotes --- Books are ...typerwriter</h3><br>
+						<h3 style="text-align: center;font-size: 2.5vw;">Books on <span class="typed" data-typed-items="Data structure and Algorithm, Programming Languages, Software Engineering, Web Devlopement, System Design, App Devlopement, Machine Learning, Data Science, Mathamathics, Networking "></span></h3><br>
 						<div class="explore-button">
 							<h3 class="explore"><a href="books.php">Explore Now</a></h3>
 						</div>
@@ -135,42 +135,11 @@ session_start();
 		</div>
 	</div>
 
-
+	<script src="./js/jquery/jquery.min.js"></script>
+	<script src="./js/typed.js/typed.min.js"></script>
+  <script src="./js/aos/aos.js"></script>
+  <script src="./js/common.js"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-</script>
-<script>
-	(function($) {
-		$(function() {
-
-			//  open and close nav 
-			$('#navbar-toggle').click(function() {
-				$('nav ul').slideToggle();
-			});
-
-
-			// Hamburger toggle
-			$('#navbar-toggle').on('click', function() {
-				this.classList.toggle('active');
-			});
-
-
-			// If a link has a dropdown, add sub menu toggle.
-			$('nav ul li a:not(:only-child)').click(function(e) {
-				$(this).siblings('.navbar-dropdown').slideToggle("slow");
-
-				// Close dropdown when select another dropdown
-				$('.navbar-dropdown').not($(this).siblings()).hide("slow");
-				e.stopPropagation();
-			});
-
-
-			// Click outside the dropdown will remove the dropdown class
-			$('html').click(function() {
-				$('.navbar-dropdown').hide();
-			});
-		});
-	})(jQuery);
-</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> -->
 
 </html>

@@ -98,42 +98,40 @@ include "navbar.php";
 
 		}
 
-		.wrapper {
-			max-height: 100px;
-			border: 1px solid #6db6b9e6;
+		.tags {
 			display: flex;
-			overflow-x: auto;
-
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 5vh;
+			margin-bottom: 5vh;
 		}
 
-		.wrapper::-webkit-scrollbar {
-			width: 200px;
-			overflow-x: scroll;
-			padding: 4px;
-
-
-			overflow-x: auto;
-			overflow-y: hidden;
-			white-space: nowrap;
-
-
-
-
-
-
-
+		.btn {
+			border: 1px solid #78757d;
+			border-radius: 5px;
+			background-color: white;
+			color: black;
+			/* padding: 10px 28px; */
+			font-size: 14px;
+			cursor: pointer;
+			margin-left: 1vw;
+			margin-right: 1vw;
 		}
 
-		.wrapper .item {
-			min-width: 110px;
-			height: 110px;
-			line-height: 110px;
-			text-align: center;
-			background-color: #6db6b9e6;
-			margin-right: 2px;
+		/* Gray */
+		.default {
+			border-color: grey;
+			color: black;
+		}
+
+		.default:hover {
+			background: #6db6b9e6;
 		}
 	</style>
-
+<script>
+  AOS.init();
+</script>
 </head>
 
 <body>
@@ -213,25 +211,16 @@ include "navbar.php";
           </div>
         </div> -->
 		<!-- custom scroll -->
-		<div class="wrapper">
-			<div class="item">box-1</div>
-			<div class="item">box-2</div>
-			<div class="item" src="">box-3</div>
-			<div class="item">box-4</div>
-			<div class="item">box-5</div>
-			<div class="item">box-6</div>
-			<div class="item">box-7</div>
-			<div class="item">box-8</div>
-			<div class="item">box-9</div>
-			<div class="item">box-10</div>
-			<div class="item">box-6</div>
-			<div class="item">box-7</div>
-
-
-
+		<div class="tags">
+			<button class="btn default">All</button>
+			<button class="btn default">Software Engineering</button>
+			<button class="btn default">System Design</button>
+			<button class="btn default">Data Science</button>
+			<button class="btn default">Programming Languages</button>
+			<button class="btn default">Data structure & Algorithm</button>
 		</div>
 
-		<h2>𝐿𝐼𝒮𝒯 𝒪𝐹 𝐵𝒪𝒪𝒦𝒮</h2>
+		<h2 style="text-align: center; font-weight:bold">𝐿𝐼𝒮𝒯 𝒪𝐹 𝐵𝒪𝒪𝒦𝒮</h2>
 		<div class="wrapper-flex">
 			<?php
 
@@ -242,12 +231,11 @@ include "navbar.php";
 				// $cat = 
 				$newcat = strtolower(str_replace(" ", "-", $cat));
 				// set image folder path here 
-				
+
 				$url = '/images/category-img/' . $newcat . '.jpg';
-			if($newcat != "") {
-				return $url;
-			} else return '/images/category-img/software-engineering.jpg';
-				
+				if ($newcat != "") {
+					return $url;
+				} else return '/images/category-img/software-engineering.jpg';
 			}
 			function setCategory($catt)
 			{
@@ -267,15 +255,13 @@ include "navbar.php";
 					while ($row = mysqli_fetch_assoc($q)) {
 			?>
 
-						<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;">
+						<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;" data-aos="fade-up">
 							<?php
 							$temp_tag_color = $row['quantity'] ==  '0' ? 'red' : 'green';
 							?>
 
 							<div class="image">
-								<img src=".<?php echo setImgPath($row['category']); ?>" alt="<?php echo $row['category']; ?> Image" 
-								
-				   style=" position: relative;">
+								<img src=".<?php echo setImgPath($row['category']); ?>" alt="<?php echo $row['category']; ?> Image" style=" position: relative;">
 								<div class="blink tag" style="background-color:<?php echo $temp_tag_color; ?>;">
 									<p class="count"><?php echo $row['quantity']; ?></p>
 								</div>
@@ -316,39 +302,39 @@ include "navbar.php";
 					?>
 
 
-<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;">
-							<?php
-							$temp_tag_color = $row['quantity'] ==  '0' ? 'red' : 'green';
-							?>
+					<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;" data-aos="fade-up">
+						<?php
+						$temp_tag_color = $row['quantity'] ==  '0' ? 'red' : 'green';
+						?>
 
-							<div class="image">
-								<img src=".<?php echo setImgPath($row['category']); ?>" alt="<?php echo $row['category']; ?> Image"  style=" position: relative;">
-								<div class="blink tag" style="background-color:<?php echo $temp_tag_color; ?>;">
-									<p class="count"><?php echo $row['quantity']; ?></p>
-								</div>
-								<div class="tag-foot">
-									<p>Copy</p>
-								</div>
+						<div class="image">
+							<img src=".<?php echo setImgPath($row['category']); ?>" alt="<?php echo $row['category']; ?> Image" style=" position: relative;">
+							<div class="blink tag" style="background-color:<?php echo $temp_tag_color; ?>;">
+								<p class="count"><?php echo $row['quantity']; ?></p>
 							</div>
-							<div class="title">
-								<h1>
-									<?php echo $row['name']; ?>
-								</h1>
-							</div>
-							<div class="des">
-								<p> By - <?php echo $row['authors']; ?> </p>
-								<?php if ($row['quantity'] == "0") {
-									echo ("<p class='blink-0'>Book not present currently.. See similar</p>");
-								} else {
-									echo ("<marquee class='blink-1'  scrollamount=''>Book is avaliable!</marquee>");
-								}  ?>
-								<p><b>Book Id-<?php echo $row['bid']; ?></b> </p>
-								<button onclick="location.href='./issue_info.php'">Get it Now!</button>
+							<div class="tag-foot">
+								<p>Copy</p>
 							</div>
 						</div>
+						<div class="title">
+							<h1>
+								<?php echo $row['name']; ?>
+							</h1>
+						</div>
+						<div class="des">
+							<p> By - <?php echo $row['authors']; ?> </p>
+							<?php if ($row['quantity'] == "0") {
+								echo ("<p class='blink-0'>Book not present currently.. See similar</p>");
+							} else {
+								echo ("<marquee class='blink-1'  scrollamount=''>Book is avaliable!</marquee>");
+							}  ?>
+							<p><b>Book Id-<?php echo $row['bid']; ?></b> </p>
+							<button onclick="location.href='./issue_info.php'">Get it Now!</button>
+						</div>
+					</div>
 
 				<?php
-				
+
 				}
 				// echo "</table>";
 			}
@@ -373,6 +359,11 @@ include "navbar.php";
 			?>
 		</div>
 	</div>
+
+	<script src="./js/jquery/jquery.min.js"></script>
+  <script src="./js/aos/aos.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/isotope-layout/isotope.pkgd.min.js"></script>
 </body>
 
 </html>

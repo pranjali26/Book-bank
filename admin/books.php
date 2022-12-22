@@ -85,6 +85,15 @@ include "navbar.php";
 
 		}
 
+		.tags {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 5vh;
+			margin-bottom: 5vh;
+		}
+
 		.btn {
 			border: 1px solid #78757d;
 			border-radius: 5px;
@@ -93,6 +102,8 @@ include "navbar.php";
 			/* padding: 10px 28px; */
 			font-size: 14px;
 			cursor: pointer;
+			margin-left: 1vw;
+			margin-right: 1vw;
 		}
 
 		/* Gray */
@@ -196,22 +207,19 @@ include "navbar.php";
 			</div>
 		</div>
 		
-		<button class="btn default">Default</button>
-		<button class="btn default">Default</button>
-		<button class="btn default">Default</button>
+		<div class="tags">
+			<button class="btn default">All</button>
+			<button class="btn default">Software Engineering</button>
+			<button class="btn default">System Design</button>
+			<button class="btn default">Data Science</button>
+			<button class="btn default">Programming Languages</button>
+			<button class="btn default">Data structure & Algorithm</button>
 
 
+		</div>
 
-
-
-
-
-
-
-
-
-
-		<h2>List Of Books</h2>
+		<h2 style="text-align: center; font-weight:bold">𝐿𝐼𝒮𝒯 𝒪𝐹 𝐵𝒪𝒪𝒦𝒮</h2>
+	
 		<?php
 
 		if (isset($_POST['submit'])) {
