@@ -14,14 +14,17 @@ if(isset($_POST['submit'])){
  
 }	
 	
-
+$count=0;
 $query0="SELECT * FROM `student` WHERE `roll` = '$roll'";
-$row = @mysqli_fetch_array(@mysqli_query($db, $query0));
+// $row= mysqli_fetch_assoc($res);
+//  $count=mysqli_num_rows($res);
+
+$row = mysqli_fetch_assoc(@mysqli_query($db, $query0));
  if ($username == $row['username'] or $roll == $row['roll']) {
   echo "<div class='alert alert-error'>User Already <b>Present</b> ⚠️ with this Roll Number or Username. Please retry or CONTACT ADMIN at admin@CSE-BOOK-BANK 📧</div>";
   echo ("<script>
-  alert('')
-  setTimeout(function(){ window.location='registration.php' }, 10000);
+
+  setTimeout(function(){ window.location='registration.php' }, 15000);
   </script>");
   
  }
@@ -32,7 +35,7 @@ else{
    <a href='student_login.php'> Please login here <br><a> </div>");
  
    echo ("<script>
-  setTimeout(function(){ window.location='student_login.php' }, 10000);
+  setTimeout(function(){ window.location='student_login.php' }, 15000);
   </script>");
    } else {
      echo "Error: " . $query1 . "<br>" . $db->error;
