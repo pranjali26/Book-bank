@@ -11,10 +11,13 @@
              height:1000vh; 
              /* background: rgb(238,174,202);  */
             /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(202,179,214,1) 40%, rgba(148,187,233,1) 100%); */ 
-             background-image:url('https://img.freepik.com/premium-vector/blue-green-gradient-background-with-bokeh-effect_23-2148358651.jpg?size=626&ext=jpg&ga=GA1.2.1655362082.1625203643&semt=sph');
-             background-repeat: no-repeat;
-             
-             
+             /* background-image:url('https://img.freepik.com/premium-vector/blue-green-gradient-background-with-bokeh-effect_23-2148358651.jpg?size=626&ext=jpg&ga=GA1.2.1655362082.1625203643&semt=sph'); */
+             /* background-repeat: no-repeat;  */
+             /* background-size: 500px; */
+  /* width: 400px; */
+  /* height: 300px; */
+  /* border: 2px solid; */
+ 
         }
                
 
