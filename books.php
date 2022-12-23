@@ -15,10 +15,10 @@ include "navbar.php";
 	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="stylesheet" href="css/book_card.css">
-
+	<link rel="stylesheet" href="css/filter.css">
+	<link href="js/aos/aos.css" rel="stylesheet">
 	<!-- CSS only -->
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
-	<style type="text/css">
+		<style type="text/css">
 		.srch {
 			padding-left: 100px;
 
@@ -130,7 +130,7 @@ include "navbar.php";
 		}
 	</style>
 <script>
-  AOS.init();
+//   AOS.init();
 </script>
 </head>
 
@@ -180,7 +180,7 @@ include "navbar.php";
 		</script>
 		<!--___________________search bar________________________-->
 
-		<div class="src-row">
+		<div class="src-row" data-aos="fade-down">
 			<div class="srch">
 				<form class="navbar-form" method="post" name="form1">
 
@@ -201,27 +201,30 @@ include "navbar.php";
 			</div>
 		</div>
 		<!-- data filter for sorting -->
-		<!-- <div class="row">
+		<div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-web-dev">Upcoming</li>
-              <li data-filter=".filter-app-dev">Past</li>
+            <ul class="filter-button-group">
+              <li data-filter="*" class="filter-active">
+			 All
+			  </li>
+              <li data-filter=".filter-software-engineering">
+			Software Engineering
+			</li>
+              <li data-filter=".filter-data-structure-and-algorithm">DSA</li>
+			  </li>
+              <li data-filter=".filter-programming-language">Programming Languages</li>
+			  </li>
+              <li data-filter=".filter-networking">Networking</li>
+			  </li>
+              <li data-filter=".filter-web-developement">Web Dev</li>
+			  <li data-filter=".filter-mathamathics">Mathamathics</li>
             </ul>
           </div>
-        </div> -->
-		<!-- custom scroll -->
-		<div class="tags">
-			<button class="btn default">All</button>
-			<button class="btn default">Software Engineering</button>
-			<button class="btn default">System Design</button>
-			<button class="btn default">Data Science</button>
-			<button class="btn default">Programming Languages</button>
-			<button class="btn default">Data structure & Algorithm</button>
-		</div>
+        </div>
+
 
 		<h2 style="text-align: center; font-weight:bold">𝐿𝐼𝒮𝒯 𝒪𝐹 𝐵𝒪𝒪𝒦𝒮</h2>
-		<div class="wrapper-flex">
+		<div class="wrapper-flex portfolio-container">
 			<?php
 
 			// general utility functions 
@@ -255,7 +258,7 @@ include "navbar.php";
 					while ($row = mysqli_fetch_assoc($q)) {
 			?>
 
-						<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;" data-aos="fade-up">
+						<div class="card book filter-<?php echo setCategory($row['category']); ?>" style=" position: relative;" data-aos="fade-up">
 							<?php
 							$temp_tag_color = $row['quantity'] ==  '0' ? 'red' : 'green';
 							?>
@@ -302,7 +305,7 @@ include "navbar.php";
 					?>
 
 
-					<div class="card <?php echo setCategory($row['category']); ?>" style=" position: relative;" data-aos="fade-up">
+					<div class="card filter-<?php echo setCategory($row['category']); ?>" style=" position: relative;" data-aos="zoom-in-up">
 						<?php
 						$temp_tag_color = $row['quantity'] ==  '0' ? 'red' : 'green';
 						?>

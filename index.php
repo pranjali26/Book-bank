@@ -125,7 +125,7 @@ session_start();
 					<div class="box" data-aos="fade-up">
 						<br><br><br><br>
 						<h1 style="text-align: center; font-size: 5vw;" class="heading">Welcome to CSE BooK Bank</h1><br><br>
-						<h3 style="text-align: center;font-size: 2.5vw;">Books on <span class="typed" data-typed-items="Data structure and Algorithm, Programming Languages, Software Engineering, Web Devlopement, System Design, App Devlopement, Machine Learning, Data Science, Mathamathics, Networking "></span></h3><br>
+						<h3 style="text-align: center;font-size: 2.5vw;">Books on <span class="typed" data-typed-items="Data structure & Algorithm, Programming Languages, Software Engineering, Web Developement, System Design, App Developement, Machine Learning, Data Science, Mathamathics, Networking "></span></h3><br>
 						<div class="explore-button">
 							<h3 class="explore"><a href="books.php">Explore Now</a></h3>
 						</div>

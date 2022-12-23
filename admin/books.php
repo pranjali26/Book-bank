@@ -107,14 +107,14 @@ include "navbar.php";
 		}
 
 		/* Gray */
-		.default {
+		/* .default {
 			border-color: grey;
 			color: black;
 		}
 
 		.default:hover {
 			background: #6db6b9e6;
-		}
+		} */
 	</style>
 
 </head>
@@ -207,16 +207,14 @@ include "navbar.php";
 			</div>
 		</div>
 		
-		<div class="tags">
+		<!-- <div class="tags">
 			<button class="btn default">All</button>
 			<button class="btn default">Software Engineering</button>
 			<button class="btn default">System Design</button>
 			<button class="btn default">Data Science</button>
 			<button class="btn default">Programming Languages</button>
 			<button class="btn default">Data structure & Algorithm</button>
-
-
-		</div>
+		</div> -->
 
 		<h2 style="text-align: center; font-weight:bold">𝐿𝐼𝒮𝒯 𝒪𝐹 𝐵𝒪𝒪𝒦𝒮</h2>
 	
